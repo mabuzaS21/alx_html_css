@@ -6,3 +6,14 @@ body {
   background-color: #f4f4f4;
   color: #333;
 }
+ @media (max-width: 768px) {
+  body.works_on_smartphone main {
+    flex-direction: column;
+  }
+
+  body.works_on_smartphone article,
+  body.works_on_smartphone aside {
+    flex: unset;
+    width: 100%;
+  }
+}
