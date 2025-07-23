@@ -8,7 +8,7 @@ You will focus on structuring the page with **HTML5** and styling it using **CSS
 
 ## Figma Design
 
-The design for this project can be accessed via the [Figma file]. Be sure to duplicate it to your drafts in Figma to access all the design details.
+The design for this project can be accessed via the [Figma file](https://www.figma.com/design/dyYL6Ku4WG7vsdpwvlcJZC/Homepage?node-id=0-1&p=f&t=6c1Kgd4OhjGwQ2G9-0). Be sure to duplicate it to your drafts in Figma to access all the design details.
 
 ## Technologies Used
 
