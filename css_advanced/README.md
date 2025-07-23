@@ -21,7 +21,6 @@ The design for this project can be accessed via the [Figma file](https://www.fig
 ## Files
 
 - `index.html` – Contains the main HTML structure for the page.
-- `style.css` – The main stylesheet for styling the page.
 - `images/` – Folder containing images used in the project (e.g., logos, icons, etc.).
 
 ## Getting Started
