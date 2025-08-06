@@ -135,6 +135,10 @@
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
 }
 
 /* Paragraph */
@@ -151,6 +155,7 @@
 }
 
 
+
 /* Responsive Styling */
 @media (max-width: 768px) {
     .hero {
@@ -158,6 +163,12 @@
         padding: 20px;
         text-align: center;
         height: auto;
+    }
+
+    .nav-toggle-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
     }
 
     .hero-content {
@@ -185,6 +196,7 @@
     .hero-content h1 {
         font-size: 100px;
         font-weight: bold;
+        white-space: normal !important;
     }
 
     .hero-content p {
@@ -193,5 +205,66 @@
 
     .hero .cta-button {
         padding: 10px 15px;
+    }
+}
+
+/* Hide the checkbox */
+.nav-toggle {
+    display: none;
+}
+
+/* Hamburger icon styling */
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.nav-toggle-label span {
+    display: block;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Responsive Hamburger Activation */
+@media (max-width: 768px) {
+    /* Show hamburger */
+    .nav-toggle-label {
+        display: flex;
+    }
+
+    /* Hide nav links by default */
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        padding: 20px 0;
+        gap: 20px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Show nav links when checkbox is checked */
+    .nav-toggle:checked + .nav-toggle-label + .nav-links {
+        display: flex;
+    }
+
+    /* Center logo on mobile */
+    .logo {
+        margin: 0 auto;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
     }
 }
