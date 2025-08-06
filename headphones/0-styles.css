@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define basic variables */
+:root {
+    --primary-color: #FF6565;
+    --secondary-color: white;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family);
+    position: absolute; /* Position the nav over the hero */
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    word-spacing: 5px;
+    gap: 5px;
+}
+
+.nav .logo img {
+    max-width: 120px;
+}
+
+.nav .logo {
+    margin-left: 165px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 2px;
+    word-spacing: 0.5px;
+    letter-spacing: 0.1px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 40px;
+    margin-left: 12px;
+    letter-spacing: normal;
+    word-spacing:normal;
+    
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color); /* Hover effect for links */
+}
+
+/* Header Section */
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+}
+
+.hero {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: url('images/headphones_hero_1.jpg') no-repeat center center/cover;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
+    z-index: -1;
+}
+
+.hero-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+    color: white;
+    z-index: 1;
+    max-width: 650px; /* Adjusted width for better text flow */
+    padding: 0 20px;
+    text-align: center; /* Center all text */
+}
+
+/* Bold Text (Main Title) */
+.hero-content h1{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: -30px;
+    margin-top: 210px;
+   white-space: nowrap;
+}
+
+
+/* Subheading */
+.hero-content h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom:50px;
+    margin-top:25px;
+}
+
+
+/* Call to Action Button */
+.hero .cta-button {
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.3rem; /* Slightly larger button */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+/* Paragraph */
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: -35px;/*d space between paragraph and button */
+    line-height: 1.6;
+    margin-top:100px;
+}
+
+
+.hero .cta-button:hover {
+    background-color: #ff3d3d;
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero .cta-button {
+        padding: 12px 20px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 100px;
+        font-weight: bold;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero .cta-button {
+        padding: 10px 15px;
+    }
+}
