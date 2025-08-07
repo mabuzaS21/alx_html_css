@@ -4,267 +4,140 @@
     box-sizing: border-box;
 }
 
-/* Define basic variables */
-:root {
-    --primary-color: #FF6565;
-    --secondary-color: white;
-    --font-family: 'Arial', sans-serif;
+body, html {
+    font-family: Source sans pro;
+    height: 100%;
 }
 
-/* Navigation Bar */
-.nav {
+header {
+    position: absolute;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Hide hamburger button by default (on desktop) */
+.hamburger {
+    display: none;
+}
+
+nav {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: var(--font-family);
-    position: absolute; /* Position the nav over the hero */
-    top: 20px;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    padding: 0 20px;
-    width: 100%;
-    box-sizing: border-box;
-    word-spacing: 5px;
-    gap: 5px;
+    padding: 0 80px;
 }
 
-.nav .logo img {
-    max-width: 120px;
-}
-
-.nav .logo {
-    margin-left: 165px;
+nav img {
+    height: 40px;
+    margin-left: 30px;
 }
 
 .nav-links {
-    list-style-type: none;
+    margin-right: 30px;
+    font-size: large;
+    list-style: none;
     display: flex;
-    gap: 2px;
-    word-spacing: 0.5px;
-    letter-spacing: 0.1px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-family: var(--font-family);
-    font-size: 13px;
+    gap: 40px;
     font-weight: bold;
-    margin-right: 40px;
-    margin-left: 12px;
-    letter-spacing: normal;
-    word-spacing:normal;
-    
+    color: #F2F2F2;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.nav-links li a:hover {
-    color: var(--primary-color); /* Hover effect for links */
+li a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
-/* Header Section */
-.header {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
+li a:hover {
+    color: #FF6565;
 }
 
 .hero {
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
+    background-image: url(images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-position: center;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100%;
-    background: url('images/headphones_hero_1.jpg') no-repeat center center/cover;
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
-    z-index: -1;
+    height: 61em;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
-    color: white;
-    z-index: 1;
-    max-width: 650px; /* Adjusted width for better text flow */
-    padding: 0 20px;
-    text-align: center; /* Center all text */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #F2F2F2;
 }
 
-/* Bold Text (Main Title) */
-.hero-content h1{
-    font-size: 2rem;
+.hero-heading {
+    margin-top: 20em;
+    margin-bottom: 50px;
+}
+
+.hero-heading h1 {
+    font-size: 42px;
     font-weight: bold;
-    margin-bottom: -30px;
-    margin-top: 210px;
-   white-space: nowrap;
 }
 
-
-/* Subheading */
-.hero-content h2 {
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin-bottom:50px;
-    margin-top:25px;
+.hero-heading p {
+    font-size: 17px;
 }
 
-
-/* Call to Action Button */
-.hero .cta-button {
-    padding: 15px 30px;
-    background-color: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-size: 1.3rem; /* Slightly larger button */
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
+.hero-content button {
     border: none;
     outline: none;
-    box-shadow: none;
     cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 30px;
+    margin-bottom: 80px;
+    background-color: #FF6565;
 }
 
-/* Paragraph */
+.hero-content button:hover {
+    opacity: 0.9;
+}
+
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: -35px;/*d space between paragraph and button */
-    line-height: 1.6;
-    margin-top:100px;
+    font-size: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-.hero .cta-button:hover {
-    background-color: #ff3d3d;
-}
-
-
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .hero {
+/* Mobile styles (max-width 800px) */
+@media (max-width: 800px) {
+    nav {
         flex-direction: column;
-        padding: 20px;
-        text-align: center;
-        height: auto;
-    }
-
-    .nav-toggle-label {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .hero .cta-button {
-        padding: 12px 20px;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .nav-links li a {
-        font-size: 14px;
-    }
-
-    .hero-content h1 {
-        font-size: 100px;
-        font-weight: bold;
-        white-space: normal !important;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .hero .cta-button {
-        padding: 10px 15px;
-    }
-}
-
-/* Hide the checkbox */
-.nav-toggle {
-    display: none;
-}
-
-/* Hamburger icon styling */
-.nav-toggle-label {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    cursor: pointer;
-    z-index: 11;
-}
-
-.nav-toggle-label span {
-    display: block;
-    height: 3px;
-    background: white;
-    border-radius: 2px;
-}
-
-/* Responsive Hamburger Activation */
-@media (max-width: 768px) {
-    /* Show hamburger */
-    .nav-toggle-label {
-        display: flex;
-    }
-
-    /* Hide nav links by default */
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
-        display: none;
-        padding: 20px 0;
-        gap: 20px;
-        transition: all 0.3s ease-in-out;
     }
 
-    /* Show nav links when checkbox is checked */
-    .nav-toggle:checked + .nav-toggle-label + .nav-links {
-        display: flex;
+    .hamburger {
+        display: block; 
+        font-size: 30px;
+        color: white;
+        position: relative;
+        top: 43px;
+        left: -55px;
+        margin-left: 0;
+        
     }
 
-    /* Center logo on mobile */
-    .logo {
-        margin: 0 auto;
-    }
-
-    .nav {
+    .nav-links {
+        display: none; 
         flex-direction: column;
         align-items: center;
+        margin-top: 20px;
+        width: 100%;
+        gap: 40px;
+    }
+
+    .nav-links.show {
+        display: flex; 
     }
 }

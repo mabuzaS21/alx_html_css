@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Headphones Webpage</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Headphones</title>
+    <link rel="Icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="0-styles.css">
 </head>
+
 <body>
-
-    <!-- Header Section -->
-    <header class="header">
-        <!-- Navigation Bar -->
-        <nav class="nav">
-            <!-- Logo -->
-            <a href="#" class="logo">
-                <img src="images/logo_headphones.png" alt="Headphones Logo">
-            </a>
-
-            <!--Hamburger Toggle-->
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle-label">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            
-            <!-- Navigation Links -->
+    <header>
+        <nav>
+            <div class="top-bar">
+                <div class="hamburger">&#9776;</div>
+                <img src="images/logo_headphones.png" alt="Logo">
+            </div>
             <ul class="nav-links">
-                <li><a href="#">what we do</a></li>
-                <li><a href="#">our results</a></li>
-                <li><a href="#">contact us </a></li>
+                <li> <a href="#">what we do</a></li>
+                <li> <a href="#">our results</a> </li>
+                <li> <a href="#">contact us</a> </li>
             </ul>
         </nav>
-
-        <!-- Hero Section -->
+    </header>
+    <main>
         <section class="hero">
             <div class="hero-content">
+                <div class="hero-heading">
                 <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
-                <h2>Lorem ipsum dolor set amet lorem ipsum dolor set </h2>
-
-                <button class="cta-button">CALL TO ACTION</button>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Lorem ipsum dolor set amet lorem ipsum dolor set</p>
             </div>
-            <div class="hero-image">
-                <img src="images/headphones_hero_1.jpg" alt="Hero Headphones">
+            <button>CALL TO ACTION</button>
+            <p>
+                Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eisumod tempor incididunt ut labore 
+
+                et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut
+
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,sunt in 
+                culpa qui officia deserunt mollit anim id est laborum.
+            </p>
             </div>
         </section>
-    </header>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            const hamburger= document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
 
-    </body>
-    </html>
+            hamburger.addEventListener('click', () =>  {
+                navLinks.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
