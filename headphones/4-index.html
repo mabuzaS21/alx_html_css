@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Headphones</title>
+    <link rel="Icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="holberton_school-icon/style.css">
+    <link rel="stylesheet" href="4-styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="top-bar">
+                <div class="hamburger">&#9776;</div>
+                <img src="images/logo_headphones.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li> <a href="#">what we do</a></li>
+                <li> <a href="#">our results</a> </li>
+                <li> <a href="#">contact us</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-heading">
+                <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+                <p>Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+            </div>
+            <button>CALL TO ACTION</button>
+            <p>
+                Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eisumod tempor incididunt ut labore 
+
+                et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut
+
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,sunt in 
+                culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            </div>
+        </section>
+
+        <section class="what-we-do">
+    <div class="doing-section1">
+        <h2>What We Do...</h2>
+        <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+       
+       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+       
+       aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+       cillum dolore eu fugiat nulla pariatur.
+        </p>
+    </div>
+
+    <div class="doing-section2">
+        <div class="doing-item">
+            <span class="holberton_school-icon-ic_sound"></span>
+            <h3>Sound</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="doing-item">
+            <span class="holberton_school-icon-ic_video"></span>
+            <h3>Video</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="doing-item">
+            <span class="holberton_school-icon-ic_music"></span>
+            <h3>Music</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="doing-item">
+            <span class="holberton_school-icon-ic_hearing"> </span>
+            <h3>Hearing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+     </div>
+ </section>
+
+ <section class="our-results">
+    <div class="result1">
+        <h1>Our results speak for themselves</h1>
+        <p>
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+            cillum dolore eu fugiat nulla pariatur.
+        </p>
+    </div>
+
+    <div class="result2">
+        <div class="pentagon">
+            <img src="images/pentagone.png" alt="">
+            <div class="pentagon-words">
+                <h4>+2%</h4>
+                <p>Lorem ipsum dolor.</p>
+            </div>
+        </div>
+
+        <div class="pentagon">
+            <img src="images/pentagone.png" alt="">
+            <div class="pentagon-words">
+                <h4>+2%</h4>
+                <p>Lorem ipsum dolor.</p>
+            </div>
+        </div>
+
+        <div class="pentagon">
+            <img src="images/pentagone.png" alt="">
+            <div class="pentagon-words">
+                <h4>+2%</h4>
+                <p>Lorem ipsum dolor.</p>
+            </div>
+        </div>
+
+        <div class="pentagon">
+             <img src="images/pentagone.png" alt="">
+            <div class="pentagon-words">
+                <h4>+2%</h4>
+                <p>Lorem ipsum dolor.</p>
+            </div>
+        </div>     
+    </div>
+ </section>
+
+  <section class="contact">
+      <h1>Contact Us</h1>
+      <form action="">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="message" placeholder="Message">
+        <button type="submit" class="btn-submit">CALL TO ACTION</button>
+      </form>
+  </section>
+
+   <section class="footer">
+    <div class="footer-content">
+        <img src="images/logo_headphones.png" alt="Logo" class="footer-logo">
+        <div class="social-links">
+            <a href="#" class="holberton_school-icon-ic_facebook"></a>
+            <a href="#" class="holberton_school-icon-ic_twitter"></a>
+            <a href="#" class="holberton_school-icon-ic_instagram"></a>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p> ©headphones 2020 </p>
+    </div>
+</section>
+
+
+
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            const hamburger= document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () =>  {
+                navLinks.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
