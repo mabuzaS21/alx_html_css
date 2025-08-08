@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Source sans pro;
+    height: 100%;
+}
+
+header {
+    position: absolute;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Hide hamburger button by default (on desktop) */
+.hamburger {
+    display: none;
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+}
+
+nav img {
+    height: 40px;
+    margin-left: 30px;
+}
+
+.nav-links {
+    margin-right: 30px;
+    font-size: large;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    font-weight: bold;
+    color: #F2F2F2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+li a:hover {
+    color: #FF6565;
+}
+
+.hero {
+    background-image: url(images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    height: 61em;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #F2F2F2;
+}
+
+.hero-heading {
+    margin-top: 20em;
+    margin-bottom: 50px;
+}
+
+.hero-heading h1 {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.hero-heading p {
+    font-size: 17px;
+}
+
+.hero-content button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 30px;
+    margin-bottom: 80px;
+    background-color: #FF6565;
+}
+
+.hero-content button:hover {
+    opacity: 0.9;
+}
+
+.hero-content p {
+    font-size: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobile styles (max-width 800px) */
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: block; 
+        font-size: 30px;
+        color: white;
+        position: relative;
+        top: 43px;
+        left: -55px;
+        margin-left: 0;
+        
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        width: 100%;
+        gap: 40px;
+    }
+
+    .nav-links.show {
+        display: flex; 
+    }
+}
+
+.what-we-do {
+    padding: 20px 40px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.doing-section1 {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%
+}
+
+.doing-section h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.doing-section p {
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.4;
+    max-width: 637px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.doing-section2 {
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 100%;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.doing-item {
+    text-align: center;
+    flex: 1;
+}
+
+.doing-item span {
+    font-size: 80px;
+    color: #FF6565;
+}
+
+.doing-item p {
+    font-size: 16px;
+    margin-top: 50px;
+}
+
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        color: white;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        width: 100%;
+        gap: 40px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    nav img {
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .doing-section2{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .doing-item {
+        margin-bottom: 20px;
+    }
+}
